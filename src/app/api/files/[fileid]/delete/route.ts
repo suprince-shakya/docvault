@@ -4,7 +4,7 @@ import { deleteFile } from '@/lib/files';
 import File from '@/models/File';
 import User from '@/models/User';
 import { NextRequest, NextResponse } from 'next/server';
-export async function GET(req: NextRequest, { params }: { params: { fileid: string } }) {
+export async function GET(req: NextRequest, { params }: { params: Promise<{ fileid: string }> }) {
 	await dbConnect();
 	const authHeader = req.headers.get('authorization');
 	if (!authHeader) return NextResponse.json({ error: true, messege: 'Unauthorized' }, { status: 401 });

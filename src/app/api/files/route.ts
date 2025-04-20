@@ -15,7 +15,7 @@ export async function GET(req: NextRequest) {
 	}
 
 	const type: any[] = [];
-	let searchType = searchParams.get('type');
+	const searchType = searchParams.get('type');
 	if (searchType === 'video,audio') {
 		type.push('audio');
 		type.push('video');

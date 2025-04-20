@@ -12,7 +12,7 @@ export default function Thumbnail({ type, extension, url = '', imageClassName, c
 	return (
 		<figure className={cn('rounded-full bg-gray-100', className, 'flex justify-center items-center')}>
 			<img
-				src={isImage ? `/api/${url}` : getFileIcon(extension, type)}
+				src={isImage ? `/api/${url}` : getFileIcon(extension)}
 				alt="thumbnail"
 				className={cn('object-cover', imageClassName, isImage && 'rounded-full', !isImage && '!size-12')}
 			/>

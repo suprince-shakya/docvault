@@ -14,7 +14,7 @@ const FileDisplay = ({ data, viewMode, actionsDropdownItems }: { data: any; view
 				<>
 					{data.data.length > 0 ? (
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-							{data.data.map((doc, i) => (
+							{data.data.map((doc: any, i: number) => (
 								<Card key={i} className="overflow-hidden bg-background dark:bg-[#1E293B] flex flex-col">
 									<div className="p-6 flex flex-col items-center">
 										<Thumbnail type={doc.type} extension={doc.extension} url={doc.path} className="!size-20" imageClassName="!size-20" />
@@ -32,8 +32,8 @@ const FileDisplay = ({ data, viewMode, actionsDropdownItems }: { data: any; view
 						</div>
 					) : (
 						<div className="flex flex-col w-full justify-center items-center">
-							<Image src={'/no-files.png'} width={300} height={300} alt="no-files" className='mt-[100px]' />
-							<h1 className='font-semibold text-2xl'>No files Found</h1>
+							<Image src={'/no-files.png'} width={300} height={300} alt="no-files" className="mt-[100px]" />
+							<h1 className="font-semibold text-2xl">No files Found</h1>
 						</div>
 					)}
 				</>
@@ -51,7 +51,7 @@ const FileDisplay = ({ data, viewMode, actionsDropdownItems }: { data: any; view
 							</TableRow>
 						</TableHeader>
 						<TableBody>
-							{data.data.map((doc, i) => (
+							{data.data.map((doc: any, i: number) => (
 								<TableRow key={doc._id}>
 									<TableCell>{i + 1}</TableCell>
 									<TableCell className="p-2">

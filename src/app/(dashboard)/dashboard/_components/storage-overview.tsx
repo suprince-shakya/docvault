@@ -37,7 +37,7 @@ export default function StorageOverview({ storageData }: { storageData: any }) {
 							<span className="text-sm font-medium">{storageData.total}MB</span>
 						</div>
 						<Progress value={storageData.percentUsed} className="h-2" />
-						<p className="text-sm text-muted-foreground mt-2">You've used {storageData.percentUsed}% of your storage. Upgrade for more space.</p>
+						<p className="text-sm text-muted-foreground mt-2">You&apos;ve used {storageData.percentUsed}% of your storage. Upgrade for more space.</p>
 					</div>
 				</div>
 			</CardContent>

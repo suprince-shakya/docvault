@@ -110,7 +110,6 @@ export async function GET(req: NextRequest) {
 				lastUpdate: new Date().toISOString(),
 			},
 		};
-		console.log(data);
 		return NextResponse.json({ message: 'Dashboard fetched successfully', data }, { status: 200 });
 	} catch (error) {
 		console.error('Error:', error);

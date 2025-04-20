@@ -47,8 +47,8 @@ export async function POST(req: NextRequest) {
 				};
 				await File.create(data);
 			}
-			let fileSize = (uploadFileSize / (1024 * 1024)).toFixed(2);
-			let sizeUsed = Number((user.used + parseFloat(fileSize)).toFixed(2));
+			const fileSize = (uploadFileSize / (1024 * 1024)).toFixed(2);
+			const sizeUsed = Number((user.used + parseFloat(fileSize)).toFixed(2));
 
 			user.used = sizeUsed;
 			await user.save();

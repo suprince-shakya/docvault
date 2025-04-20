@@ -55,7 +55,7 @@ export const getFileType = (fileName: string) => {
 	return { type: 'other', extension };
 };
 
-export const getFileIcon = (extension: string | undefined, type: string) => {
+export const getFileIcon = (extension: string | undefined) => {
 	const ext = extension?.split('.')[1];
 	switch (ext) {
 		case 'pdf':

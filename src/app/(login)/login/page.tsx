@@ -20,7 +20,7 @@ export default function LoginPage() {
 							<br />
 							the best way
 						</h1>
-						<p className="text-white/80 mb-8">Awesome, we've created the perfect place for you to store all your documents.</p>
+						<p className="text-white/80 mb-8">Awesome, we&apos;ve created the perfect place for you to store all your documents.</p>
 
 						<div className="mt-8">
 							<Image src="/logo.png" alt="File management illustration" width={200} height={200} className="mx-auto md:mx-0" />

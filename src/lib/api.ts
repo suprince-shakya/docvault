@@ -17,6 +17,10 @@ export const getDashboard = async () => {
 	return data;
 };
 
+export const getProfile = async () => {
+	return await api.get('/api/user/me');
+};
+
 export const getFiles = async (queryKey: string[]) => {
 	const { data } = await api.get(`/api/files?type=${queryKey}`);
 	return data;

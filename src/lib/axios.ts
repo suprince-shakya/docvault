@@ -1,4 +1,4 @@
-import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
+import axios, { AxiosError, AxiosInstance, AxiosResponse } from 'axios';
 
 const api: AxiosInstance = axios.create({
 	baseURL: process.env.NEXT_PUBLIC_API_URL,

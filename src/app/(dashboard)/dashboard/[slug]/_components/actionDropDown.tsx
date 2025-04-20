@@ -3,7 +3,7 @@ import { MoreVertical } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { constructDownloadUrl } from '@/lib/utils';
 import { Input } from '@/components/ui/input';
@@ -11,7 +11,6 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { archiveFile, moveToTrashFile, permanentlyDeleteFile, restoreFile } from '@/lib/api';
 import { toast } from '@/hooks/use-toast';
 import { ActionType } from '@/lib/dropdownItems';
-import { deleteFile } from '@/lib/files';
 
 const ActionDropDown = ({ file, actionsDropdownItems }: { file: any; actionsDropdownItems: ActionType[] }) => {
 	const [action, setAction] = useState<ActionType | null>(null);
