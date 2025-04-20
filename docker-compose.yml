@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  vault:
+    container_name: vault
+    image: ghcr.io/suprince-shakya/vault-ghcr:latest
+    ports:
+      - 3005:3000
+    volumes:
+      - ./uploads:/app/uploads
+    restart: on-failure
