@@ -7,10 +7,20 @@ import User from '@/models/User';
 import { NextRequest, NextResponse } from 'next/server';
 import path from 'path';
 
+export const config = {
+	api: {
+		responseLimit: false,
+		bodyParser: {
+			sizeLimit: '5gb',
+		},
+	},
+};
+
 export async function POST(req: NextRequest) {
 	await dbConnect();
 	const formData = await req.formData();
-	const authHeader = req.headers.get('authorization');
+	const authHeader = req.headers.get('Authorization');
+	console.log(authHeader);
 	if (!authHeader) return NextResponse.json({ error: true, messege: 'Unauthorized' }, { status: 401 });
 
 	let tokenData: any;
@@ -19,6 +29,7 @@ export async function POST(req: NextRequest) {
 	} catch (err: any) {
 		return NextResponse.json({ error: true, message: err.name }, { status: 401 });
 	}
+
 	try {
 		const files = formData.getAll('files') as File[];
 
